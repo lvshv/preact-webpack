@@ -1,0 +1,190 @@
+@import './fonts.scss';
+@import './colors.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: $main-text;
+  font-family: Rubik, sans-serif;
+  outline: none;
+  scrollbar-color: $gray-light $disabled;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $gray-light;
+    border-radius: 60px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    height: 36px;
+    background: $disabled;
+    border-radius: 60px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.sidebarShadow {
+  position: fixed;
+  z-index: 99;
+  display: none;
+  box-sizing: border-box;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: rgb(106 118 126 / 40%);
+  visibility: hidden;
+}
+
+.sidebarCatalogShadow {
+  position: fixed;
+  z-index: 99;
+  box-sizing: border-box;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: rgb(106 118 126 / 40%);
+  visibility: hidden;
+  transition: 0.3s all;
+
+  &.show {
+    visibility: visible;
+
+    @media (max-width: '1280px') {
+      visibility: visible;
+    }
+  }
+}
+
+.sidebarShadow {
+  @media (max-width: '992px') {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.sidebarBackplate,
+.sidebarCatalogBackplate {
+  position: absolute;
+  z-index: 99;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+  background-color: $gray-light;
+
+  // padding: 0 0 100px 0;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emptyPlace {
+    height: 100px;
+    background-color: transparent;
+    visibility: hidden;
+
+    @media only screen {
+      height: 250px;
+    }
+  }
+}
+
+.sidebarCatalogBackplate {
+  left: -420px;
+  background-color: $white;
+  transition: 0.3s all;
+
+  .arrowSvg {
+    opacity: 0;
+  }
+
+  &.show {
+    left: 0;
+  }
+
+  @media (max-width: '1280px') {
+    width: 360px;
+  }
+
+  @media (max-width: '480px') {
+    width: 100%;
+  }
+}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select {
+  appearance: none;
+  appearance: none;
+  appearance: none;
+}
+
+.disabled {
+  opacity: 0.5 !important;
+  transition: opacity 0.3s;
+  pointer-events: none !important;
+}
+
+.grecaptcha-badge {
+  bottom: 63px !important;
+  z-index: 100;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+.swiper-wrapper .swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+.container {
+  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

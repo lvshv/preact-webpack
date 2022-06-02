@@ -1,0 +1,216 @@
+@import '@/src/styles/fonts.scss';
+@import '@/src/styles/colors.scss';
+
+// --headers--
+@mixin h1 {
+  font-family: 'Ubuntu-Bold', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 120%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin headerMedium {
+  font-family: 'Ubuntu-Medium', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin headerLight {
+  font-family: 'Ubuntu-Light', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin headerRegular {
+  font-family: 'Ubuntu-Regular', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin h1Medium {
+  @include headerMedium();
+  font-size: 48px;
+}
+
+@mixin h1Light {
+  @include headerLight();
+  font-size: 48px;
+}
+
+@mixin h2Medium {
+  @include headerMedium();
+  font-size: 36px;
+}
+
+@mixin h2Light {
+  @include headerLight();
+  font-size: 36px;
+}
+
+@mixin h3Medium {
+  @include headerMedium();
+  font-size: 24px;
+}
+
+@mixin h3Regular {
+  @include headerRegular();
+  font-size: 24px;
+}
+
+@mixin h4Medium {
+  @include headerMedium();
+  font-size: 18px;
+}
+
+@mixin h4Regular {
+  @include headerRegular();
+  font-size: 18px;
+}
+
+//  --Paragraphs--
+
+@mixin pRegular {
+  font-family: 'Ubuntu-Regular', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 140%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin pMedium {
+  font-family: 'Ubuntu-Medium', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin p18Regular {
+  @include pRegular();
+  font-size: 18px;
+}
+
+@mixin p18Medium {
+  @include pMedium();
+  font-size: 18px;
+}
+
+@mixin p16Regular {
+  @include pRegular();
+  font-size: 16px;
+}
+
+@mixin p16Medium {
+  @include pMedium();
+  font-size: 16px;
+}
+
+@mixin p14Regular {
+  @include pRegular();
+  font-size: 14px;
+}
+@mixin p12Regular {
+  @include pRegular();
+  font-size: 12px;
+}
+
+@mixin p14Medium {
+  @include pMedium();
+  font-size: 14px;
+}
+@mixin p12Medium {
+  @include pMedium();
+  font-size: 12px;
+}
+
+// --labels--
+
+@mixin labelRegular {
+  font-family: 'Ubuntu-Regular', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin labelMedium {
+  font-family: 'Ubuntu-Medium', sans-serif, system-ui;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin l20Regular {
+  @include labelRegular();
+  font-size: 20px;
+}
+
+@mixin l20Medium {
+  @include labelMedium();
+  font-size: 20px;
+}
+
+@mixin l18Regular {
+  @include labelRegular();
+  font-size: 18px;
+}
+
+@mixin l18Medium {
+  @include labelMedium();
+  font-size: 18px;
+}
+
+@mixin l16Regular {
+  @include labelRegular();
+  font-size: 16px;
+}
+
+@mixin l16Medium {
+  @include labelMedium();
+  font-size: 16px;
+}
+
+@mixin l14Regular {
+  @include labelRegular();
+  font-size: 14px;
+}
+
+@mixin l14Medium {
+  @include labelMedium();
+  font-size: 14px;
+}
+
+@mixin l12Regular {
+  @include labelRegular();
+  font-size: 12px;
+}
+
+@mixin l12Medium {
+  @include labelMedium();
+  font-size: 12px;
+}

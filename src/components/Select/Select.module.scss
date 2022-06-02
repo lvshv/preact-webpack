@@ -1,0 +1,113 @@
+@import '@/src/styles/colors.scss';
+@import '@/src/styles/typograhy.scss';
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  &.error {
+    .select {
+      border-color: $red;
+    }
+  }
+}
+
+.label {
+  @include l16Medium;
+  color: $sub-text-dark;
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: $white;
+  border: 1px solid $border;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 8px 0px;
+  transition: 0.3s;
+  height: 50px;
+  &.active {
+    border-color: $green;
+  }
+}
+
+.input {
+  width: 100%;
+  border: none;
+  @include l16Regular;
+  outline: none;
+  text-overflow: ellipsis;
+  color: $main-text;
+  cursor: pointer;
+  &::placeholder {
+    color: $sub-text-light;
+  }
+}
+
+.options {
+  position: absolute;
+  background: $white;
+  width: 100%;
+  overflow-y: auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 25px 35px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0px;
+  z-index: 10;
+
+  .option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: $white;
+    transition: 0.3s;
+    .text {
+      @include l16Regular;
+      color: $sub-text-dark;
+      background-color: transparent;
+      max-width: 80%;
+      min-height: 24px;
+      &.active {
+        color: $green;
+      }
+    }
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  path {
+    fill: $green;
+  }
+}
+
+.iconArrowFull {
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+  path {
+    fill: $sub-text-light;
+  }
+
+  &.active {
+    transform: rotate(180deg);
+  }
+}

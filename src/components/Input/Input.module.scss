@@ -1,0 +1,76 @@
+@import '@/src/styles/colors.scss';
+@import '@/src/styles/typograhy.scss';
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  .clearButton {
+    position: absolute;
+    right: 12px;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.label {
+  @include l16Medium;
+}
+
+.input {
+  @include l16Regular;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $input-border;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 8px;
+
+  &:focus,
+  &:active {
+    border: 1px solid $green;
+  }
+
+  &::placeholder {
+    color: $sub-text-light;
+  }
+
+  &.error {
+    border: 1px solid $red;
+  }
+
+  &.withPrefix {
+    padding-left: 40px;
+  }
+
+  &.filtersRangeInput {
+    max-width: 160px;
+  }
+}
+
+.prefix {
+  @include l16Regular;
+  color: $sub-text;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.message {
+  margin-top: 8px;
+}
+
+.errorMessage {
+  color: $red;
+}
